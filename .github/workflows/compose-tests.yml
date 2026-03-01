@@ -1,0 +1,31 @@
+name: Compose Tests
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+
+jobs:
+  compose-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Docker version
+        run: |
+          docker --version
+          docker compose version
+
+      - name: Compose test profile
+        run: docker compose --profile tests up --build --abort-on-container-exit
+
+      - name: Extra test container
+        run: docker compose run --rm test-3
+
+      - name: Compose cleanup
+        if: always()
+        run: docker compose down --volumes --remove-orphans

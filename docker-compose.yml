@@ -1,0 +1,45 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: <SERVICE_NAME>-app
+    command: ["python3", "app/main.py"]
+    ports:
+      - "<DEFAULT_PORT>:<DEFAULT_PORT>"
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+
+  test-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: <SERVICE_NAME>-test-1
+    command: ["sh", "-lc", "<TEST_CMD_1>"]
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    profiles: ["tests"]
+
+  test-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: <SERVICE_NAME>-test-2
+    command: ["sh", "-lc", "<TEST_CMD_2>"]
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    profiles: ["tests"]
+
+  test-3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: <SERVICE_NAME>-test-3
+    command: ["sh", "-lc", "<TEST_CMD_3>"]
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    profiles: ["tests"]
