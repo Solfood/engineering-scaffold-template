@@ -36,3 +36,7 @@ rsync -a .tmp-engineering/ ./
 rm -rf .tmp-engineering
 git clone https://github.com/Solfood/agent-overseer-framework.git .overseer
 ```
+
+## New Chat Continuity
+
+Use `docs/new-chat-continuation-prompt.md` whenever you start a new chat/session so the next agent loads the same sources, applies the same controls, and continues with evidence-backed slices.
