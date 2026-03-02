@@ -33,3 +33,26 @@ Use this together with `agent-overseer-framework` to add governance and security
 
 - Companion repo: https://github.com/Solfood/agent-overseer-framework
 - Integration guide: `docs/paired-with-overseer.md`
+
+
+## Start New Project (Human Bootstrap)
+
+```bash
+mkdir -p <new-project> && cd <new-project>
+git init
+
+# Pull execution scaffold
+git clone https://github.com/Solfood/engineering-scaffold-template.git .tmp-engineering
+rsync -a .tmp-engineering/ ./
+rm -rf .tmp-engineering
+
+# Pull overseer framework as governance layer
+git clone https://github.com/Solfood/agent-overseer-framework.git .overseer
+```
+
+Then run:
+
+```bash
+python3 tools/validate_template_scaffold.py
+python3 .overseer/tools/validate_overseer_framework.py
+```

@@ -24,3 +24,15 @@ python3 tools/validate_template_scaffold.py
 3. Require that all release decisions include both:
 - engineering evidence artifacts
 - overseer gate outcomes
+
+
+## Pull Both Framework Repos
+
+```bash
+mkdir -p <new-project> && cd <new-project>
+git init
+git clone https://github.com/Solfood/engineering-scaffold-template.git .tmp-engineering
+rsync -a .tmp-engineering/ ./
+rm -rf .tmp-engineering
+git clone https://github.com/Solfood/agent-overseer-framework.git .overseer
+```
