@@ -26,3 +26,10 @@ Search and replace these tokens:
 - `<SERVICE_NAME>`
 - `<DEFAULT_PORT>`
 - `<TEST_CMD_1>`, `<TEST_CMD_2>`, `<TEST_CMD_3>`
+
+## Companion Framework
+
+Use this together with `agent-overseer-framework` to add governance and security gatekeeping to execution workflows.
+
+- Companion repo: https://github.com/Solfood/agent-overseer-framework
+- Integration guide: `docs/paired-with-overseer.md`
