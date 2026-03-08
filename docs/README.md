@@ -18,3 +18,4 @@ Lean documentation system for fast experiments and progressive refinement.
 - Outcomes must be backed by verifiable evidence, not prose-only reasoning.
 - Acceptable evidence: tests, logs, metrics, benchmark output, or reproducible command output.
 - Each `Result` section links to concrete artifact(s).
+- Final release artifacts should be audited separately from working files so local state, secret overrides, caches, and generated build outputs do not leak into deliverables.

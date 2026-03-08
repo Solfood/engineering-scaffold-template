@@ -17,8 +17,9 @@ This repository defines execution scaffolding. Pair it with:
 1. Intake work item using overseer templates (`task-intake`, risk class).
 2. Plan/execute with engineering markers, experiments, and decision records.
 3. Run verification and collect artifacts.
-4. Evaluate against overseer review gates.
-5. Approve/block release with explicit rationale and residual risk.
+4. Audit release artifacts/package contents and strip local-only files.
+5. Evaluate against overseer review gates.
+6. Approve/block release with explicit rationale and residual risk.
 
 ## Minimum handoff package
 
@@ -27,3 +28,4 @@ This repository defines execution scaffolding. Pair it with:
 - Evidence artifacts
 - Gate outcomes (pass/fail)
 - Next actions
+- Any infrastructure recovery notes (backend state, stale locks, expired credentials, manual cleanup steps)
