@@ -1,6 +1,6 @@
 # Adoption Guide
 
-1. Copy `template/` contents into a new repository root.
+1. Copy this repository's scaffold contents into a new repository root.
 2. Replace placeholders:
 - `<PROJECT_NAME>`
 - `<MARKER_PREFIX>`
@@ -15,6 +15,21 @@ python3 tools/validate_template_scaffold.py
 - `docs/engineering/work-index.md`
 - `docs/experiments/EXP-0001-<slug>.md`
 5. Enable CI by pushing `.github/workflows/compose-tests.yml`.
+
+## Repo content guidance
+
+Keep a clear line between durable repo artifacts and temporary working material.
+
+- Good long-term repo candidates:
+  - architecture and product docs that describe the current system
+  - durable decisions
+  - stable operating notes another engineer would need later
+- Usually local or temporary:
+  - session-by-session scratch planning
+  - agent-only working notes
+  - generated artifacts, runtime state, and one-off investigation files
+
+Teams can start broad, but should prune the committed docs set down to the pieces that remain useful after the current workstream is over.
 
 
 ## Paired adoption (recommended)

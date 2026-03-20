@@ -27,6 +27,13 @@ Search and replace these tokens:
 - `<DEFAULT_PORT>`
 - `<TEST_CMD_1>`, `<TEST_CMD_2>`, `<TEST_CMD_3>`
 
+## Commit Hygiene
+
+The scaffold is intentionally broad. Not every working file needs to become a durable repo artifact.
+
+- Keep durable docs, decisions, and evidence that future contributors will actually use.
+- Prune or keep local any temporary planning notes, session scratchpads, generated files, and other agent-only artifacts before pushing upstream.
+
 ## Companion Framework
 
 Use this together with `agent-overseer-framework` to add governance and security gatekeeping to execution workflows.
