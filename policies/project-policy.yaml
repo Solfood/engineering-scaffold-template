@@ -1,0 +1,17 @@
+project_name: "<PROJECT_NAME>"
+marker_prefix: "<MARKER_PREFIX>"
+risk_tolerance: "medium"
+critical_assets:
+  - "user_data"
+  - "auth_tokens"
+compliance_requirements:
+  - "none"
+blocking_severities:
+  - "critical"
+  - "high"
+mandatory_gates:
+  - "coherence"
+  - "safety"
+  - "security"
+  - "verification"
+  - "release_readiness"

@@ -1,69 +1,27 @@
 # Engineering Scaffold Template
 
-Reusable project scaffold for iterative delivery across multiple sessions.
+Reusable scaffold for AI-assisted iterative delivery. Combines execution structure with governance gates in a single repo.
 
-## Includes
+## Setup
 
-- Decision/experiment-driven docs workflow
-- Marker-based work tracking (`<PREFIX>-<TRACK>-<NNNN>`)
-- Session handoff log for continuity
-- Evidence-first validation policy
-- Container-first local/CI workflow
+1. Copy this repo into your project.
+2. Set your project name and marker prefix in `policies/project-policy.yaml`.
+3. Read `CLAUDE.md` — that's the full operating guide for any AI agent working in this repo.
 
-## Quick Start
-
-1. Copy this template into a new repo.
-2. Set your marker prefix in `docs/engineering/marking-system.md`.
-3. Create your first experiment from `docs/experiments/EXP-0001-template.md`.
-4. Update CI workflow commands in `.github/workflows/compose-tests.yml`.
-
-## Placeholder Convention
-
-Search and replace these tokens:
+## Placeholders to replace
 
 - `<PROJECT_NAME>`
 - `<MARKER_PREFIX>`
-- `<SERVICE_NAME>`
-- `<DEFAULT_PORT>`
-- `<TEST_CMD_1>`, `<TEST_CMD_2>`, `<TEST_CMD_3>`
 
-## Commit Hygiene
+## How it works
 
-The scaffold is intentionally broad. Not every working file needs to become a durable repo artifact.
+- `CLAUDE.md` — AI operating instructions: lifecycle, gates, markers, security defaults
+- `docs/work-index.md` — track active work items
+- `docs/session-log.md` — continuity across sessions
+- `docs/decisions/` — decision records (DEC-NNNN.md)
+- `docs/experiments/` — experiment records (EXP-NNNN.md)
+- `templates/` — intake, decisions, threat models, release readiness
 
-- Keep durable docs, decisions, and evidence that future contributors will actually use.
-- Prune or keep local any temporary planning notes, session scratchpads, generated files, and other agent-only artifacts before pushing upstream.
+## Commit hygiene
 
-## Companion Framework
-
-Use this together with `agent-overseer-framework` to add governance and security gatekeeping to execution workflows.
-
-- Companion repo: https://github.com/Solfood/agent-overseer-framework
-- Integration guide: `docs/paired-with-overseer.md`
-
-
-## Start New Project (Human Bootstrap)
-
-```bash
-mkdir -p <new-project> && cd <new-project>
-git init
-
-# Pull execution scaffold
-git clone https://github.com/Solfood/engineering-scaffold-template.git .tmp-engineering
-rsync -a .tmp-engineering/ ./
-rm -rf .tmp-engineering
-
-# Pull overseer framework as governance layer
-git clone https://github.com/Solfood/agent-overseer-framework.git .overseer
-```
-
-Then run:
-
-```bash
-python3 tools/validate_template_scaffold.py
-python3 .overseer/tools/validate_overseer_framework.py
-```
-
-## Continuation Prompt
-
-- Use `docs/new-chat-continuation-prompt.md` to restart work in a fresh chat.
+Keep durable artifacts (decisions, experiments with evidence, architecture notes). Prune session scratchpads and agent-only working notes before pushing.
