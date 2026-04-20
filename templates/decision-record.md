@@ -6,7 +6,15 @@
 - Marker: <PREFIX>-<TRACK>-<NNNN>
 - Supersedes: N/A
 
-## Context
+## Intake
+
+- Objective:
+- In scope:
+- Out of scope:
+- Risk class: low | medium | high
+- Critical assets touched:
+- Dependencies:
+- Expected evidence:
 
 ## Options Considered
 

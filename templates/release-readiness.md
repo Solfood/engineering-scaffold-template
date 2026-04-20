@@ -10,10 +10,10 @@
 | Gate | Name | Status | Notes |
 |------|------|--------|-------|
 | 1 | Coherence | pass \| fail | |
-| 2 | Safety | pass \| fail | |
-| 3 | Security | pass \| fail | |
-| 4 | Engineering Fundamentals | pass \| fail | |
-| 5 | Verification | pass \| fail | |
+| 2 | Security | pass \| fail | |
+| 3 | Engineering Fundamentals | pass \| fail | |
+| 4 | Verification | pass \| fail | |
+| 5 | Safety | pass \| fail | |
 | 6 | Release Readiness | pass \| fail | |
 
 ## Blocking Issues

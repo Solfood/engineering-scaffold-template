@@ -2,11 +2,17 @@
 
 Reusable scaffold for AI-assisted iterative delivery. Combines execution structure with governance gates in a single repo.
 
-## Setup
+## Bootstrap a new project
 
-1. Copy this repo into your project.
-2. Set your project name and marker prefix in `policies/project-policy.yaml`.
-3. Read `CLAUDE.md` — that's the full operating guide for any AI agent working in this repo.
+```bash
+mkdir -p <new-project> && cd <new-project>
+git init
+git clone https://github.com/Solfood/engineering-scaffold-template.git .tmp
+rsync -a .tmp/ ./
+rm -rf .tmp
+```
+
+Then open `policies/project-policy.yaml` and set `project_name` and `marker_prefix`.
 
 ## Placeholders to replace
 
@@ -15,13 +21,13 @@ Reusable scaffold for AI-assisted iterative delivery. Combines execution structu
 
 ## How it works
 
-- `CLAUDE.md` — AI operating instructions: lifecycle, gates, markers, security defaults
-- `docs/work-index.md` — track active work items
+- `CLAUDE.md` — full operating guide for any AI agent in this repo
+- `docs/work-index.md` — active work items with markers
 - `docs/session-log.md` — continuity across sessions
-- `docs/decisions/` — decision records (DEC-NNNN.md)
-- `docs/experiments/` — experiment records (EXP-NNNN.md)
-- `templates/` — intake, decisions, threat models, release readiness
+- `docs/decisions/` — DEC-NNNN.md decision records
+- `docs/experiments/` — EXP-NNNN.md experiment records
+- `templates/` — decision-record (includes intake), experiment, threat-model, release-readiness
 
 ## Commit hygiene
 
-Keep durable artifacts (decisions, experiments with evidence, architecture notes). Prune session scratchpads and agent-only working notes before pushing.
+Keep: decisions, experiments with evidence, architecture notes, session log. Prune: agent scratch notes, generated files, local state.

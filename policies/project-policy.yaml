@@ -11,7 +11,8 @@ blocking_severities:
   - "high"
 mandatory_gates:
   - "coherence"
-  - "safety"
   - "security"
+  - "engineering_fundamentals"
   - "verification"
+  - "safety"
   - "release_readiness"
